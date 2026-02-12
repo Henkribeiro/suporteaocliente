@@ -80,9 +80,7 @@
                   <div class="card-item__holder">Card Holder</div>
                   <transition name="slide-fade-up">
                     <div class="card-item__name" v-if="cardName.length" key="$index">
-                      <transition-group name="slide-fade-right">
-                        <span class="card-item__nameItem" v-for="(n, $index) in cardName.replace(/\s\s+/g, ' ')"  v-bind:key="$index + 1">{{n}}</span>
-                      </transition-group>
+                      <span class="card-item__nameItem" v-for="(n, $index) in cardName.replace(/\s\s+/g, ' ')" v-bind:key="$index">{{n}}</span>
                     </div>
                     <div class="card-item__name" v-else key="2">Full Name</div>
                   </transition>

@@ -79,9 +79,9 @@
                 <label for="cardName" class="card-item__info" ref="cardName">
                   <div class="card-item__holder">Card Holder</div>
                   <transition name="slide-fade-up">
-                    <div class="card-item__name" v-if="cardName.length" key="1">
+                    <div class="card-item__name" v-if="cardName.length" key="$index">
                       <transition-group name="slide-fade-right">
-                        <span class="card-item__nameItem" v-for="(n, $index) in cardName.replace(/\s\s+/g, ' ')" v-if="$index === $index" v-bind:key="$index + 1">{{n}}</span>
+                        <span class="card-item__nameItem" v-for="(n, $index) in cardName.replace(/\s\s+/g, ' ')"  v-bind:key="$index + 1">{{n}}</span>
                       </transition-group>
                     </div>
                     <div class="card-item__name" v-else key="2">Full Name</div>
@@ -135,7 +135,6 @@
         <div class="card-input">
           <label for="cardName" class="card-input__label">Card Holders</label>
           <input type="text" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off">
-         
         </div>
         <div class="card-form__row">
           <div class="card-form__col">

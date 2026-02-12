@@ -77,7 +77,7 @@
               </label>
               <div class="card-item__content">
                 <label for="cardName" class="card-item__info" ref="cardName">
-                  <div class="card-item__holder">Card Holder</div>
+                  <div class="card-item__holder">Titular</div>
                   <transition name="slide-fade-up">
                     <div class="card-item__name" v-if="cardName.length" key="$index">
                       <span class="card-item__nameItem" v-for="(n, $index) in cardName.replace(/\s\s+/g, ' ')" v-bind:key="$index">{{n}}</span>
@@ -86,7 +86,7 @@
                   </transition>
                 </label>
                 <div class="card-item__date" ref="cardDate">
-                  <label for="cardMonth" class="card-item__dateTitle">Expires</label>
+                  <label for="cardMonth" class="card-item__dateTitle">Validade</label>
                   <label for="cardMonth" class="card-item__dateItem">
                     <transition name="slide-fade-up">
                       <span v-if="cardMonth" v-bind:key="cardMonth">{{cardMonth}}</span>
